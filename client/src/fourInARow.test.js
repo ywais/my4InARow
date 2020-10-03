@@ -25,7 +25,20 @@ describe('App Test', () => {
         await page.waitForSelector('#column0 #square0 .player1', {visible: true});
         await (await page.$('#column0')).click()
         await page.waitForSelector('#column0 #square1 .player2', {visible: true});
-    })
+    });
+
+    test('Cannot insert more than 6 and turn doesnt change on full collumn click', async () => {
+        await page.waitForSelector('#column0', {visible: true});
+        for (let i = 0; i < 7; i++) {
+            await (await page.$('#column0')).click();
+        }
+        const player1 = await (await page.$$('.player1')).length;
+        const player2 = await (await page.$$('.player2')).length;
+        expect(player1 + player2).toBe(6);
+        await (await page.$('#column1')).click();
+        const player1After = await (await page.$$('.player1')).length;
+        expect(player1After).toBe(4);
+    });
 
     test('Can have a tie', async () => {
         await page.waitForSelector('#column0', {visible: true});
@@ -44,7 +57,7 @@ describe('App Test', () => {
         }
         modal = await page.waitForSelector('.winModal', {visible: true});
         expect(modal).not.toBeNull();
-    })
+    });
 
     test('Can win horizontal', async () => {
         await page.waitForSelector('#column0', {visible: true});
@@ -63,7 +76,7 @@ describe('App Test', () => {
         await (await page.$('#column5')).click()
         modal = await page.waitForSelector('.winModal', {visible: true});
         expect(modal).not.toBeNull();
-    })
+    });
 
     test('Can win vertical', async () => {
         await page.waitForSelector('#column1', {visible: true});
@@ -82,7 +95,7 @@ describe('App Test', () => {
         await (await page.$('#column1')).click()
         modal = await page.waitForSelector('.winModal', {visible: true});
         expect(modal).not.toBeNull();
-    })
+    });
 
     test('Can win diagonal up', async () => {
         await page.waitForSelector('#column1', {visible: true});
@@ -100,7 +113,7 @@ describe('App Test', () => {
         await (await page.$('#column3')).click()
         modal = await page.waitForSelector('.winModal', {visible: true});
         expect(modal).not.toBeNull();
-    })
+    });
 
     test('Can win diagonal down', async () => {
         await page.waitForSelector('#column1', {visible: true});
@@ -118,7 +131,7 @@ describe('App Test', () => {
         await (await page.$('#column2')).click()
         modal = await page.waitForSelector('.winModal', {visible: true});
         expect(modal).not.toBeNull();
-    })
+    });
 
     afterEach(() => {
         browser.close();
