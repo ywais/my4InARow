@@ -24,6 +24,13 @@
 body{
   background-color: rgb(206, 186, 150);
 }
+
+.App {
+  display: flex;
+  justify-content: center;
+  width:100%;
+}
+
 .Board {
   display: flex;
   justify-content: center;
