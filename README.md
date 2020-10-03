@@ -1,2 +1,2 @@
-# 4In-a-row-SOLUTION
-Our solution to the 4 In A Row Challenge
+# 4In-a-row-SOLUTION-STARTER
+Our TEMPLATE for starting the 4 In A Row Challenge
