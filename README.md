@@ -10,7 +10,7 @@ The game immediately ends when one player connects four balls or when there is n
 
 ## Requirements:
 - The game board should be consisted of 7 columns (array of columns), with each of them having an id: column0, column1, column2...
-- Each of the columns should be consisted of 6 squares (array of squares), with each of them having an id: square0, square1, square2.. 
+- Each of the columns should be consisted of 6 squares (array of squares), with each of them having a className of 'Square' and an id: square0, square1, square2.. 
 - When a column is clicked. the lowest empty square should have a div with a className: player1, player2
 according to the turn. (player1 goes first)
 - Game result (victory/tie) should be represented in a modal, that is labeled with the className: winModal.

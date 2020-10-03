@@ -32,7 +32,7 @@ function Board() {
                 <span>{i}</span> {/* should remove once you understand the concept */}
                 {
                     /* 
-                        here you should have your squares implemented, each with a square id of - square0 -> square1 -> square2
+                        here you should have your squares implemented, each with a className 'Square' and an id of - square0 -> square1 -> square2
                     */
                 }
                 </div>
