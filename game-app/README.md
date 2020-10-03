@@ -1,5 +1,4 @@
-# 4In-a-row-SOLUTION-STARTER
-Our TEMPLATE for starting the 4 In A Row Challenge
+# Four In A Row
 
 ## Game instructions:
 The goal of the game is to draw either a vertical, horizontal or diagonal line with four balls of the same player chained together.
@@ -28,9 +27,9 @@ player1 goes first !!
 - Player can win the game by having 4 balls in a descending diagonal line
 
 ## expected Id Layout:
-![idLayout](./idLayout.png)
+![idLayout](../idLayout.png)
 * 'column(number)' represents the id of the whole element surrounding the six squares
 * 'square(number) represents the id of each div inside the column container.
 * throughout the game each square will be filled with a child labeled by the className 'player1' or 'player2'.
 ## Win demonstrations:
-![gameplay](./FourInARow.gif)
+![gameplay](../FourInARow.gif)
