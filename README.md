@@ -20,6 +20,7 @@ according to the turn. (player1 goes first)
 ## Tests:
 player1 goes first !!
 - Board is initially empty when the game starts
+- if you fill up a collumn with balls it won't exceed the 6 ball limit, and will not change the turn of the player.
 - Every time you click a column, it will add a div with the CORRECT className (player1 or player2) to the CORRECT square.
 - The game can end with a tie (all squares are full)
 - Player can win the game by having 4 balls in a row
