@@ -1,4 +1,4 @@
-# 4In-a-row-SOLUTION-STARTER
+# 4In-a-row-BOILERPLATE
 Our TEMPLATE for starting the 4 In A Row Challenge
 
 ## Game instructions:
