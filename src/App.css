@@ -96,6 +96,6 @@ body{
   height: 100%;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
-filter: blur(3px);
+  filter: blur(3px);
   z-index: 2;
 }
